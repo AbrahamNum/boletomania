@@ -73,7 +73,7 @@ $router->get('/finalizar-registro/conciertos', [RegistroCrontroller::class, 'con
 $router->post('/finalizar-registro/conciertos', [RegistroCrontroller::class, 'conciertos']);
 
 // Boleto Virtual
-$router->get('/boleto', [RegistroCrontroller::class, 'boleto']);
+$router->get('https://fast-ocean-13494-d7e50af88d45.herokuapp.com/boleto', [RegistroCrontroller::class, 'boleto']);
 
 
 // Area Publica 
