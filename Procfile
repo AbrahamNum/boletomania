@@ -1,1 +1,0 @@
-web: vendor/bin/heruoku-php-apache2 public/
