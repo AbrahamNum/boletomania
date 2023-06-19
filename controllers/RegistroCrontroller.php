@@ -71,20 +71,7 @@ class RegistroCrontroller
 
         public static function boleto(Router $router) {
 
-            // Validar la URL
-            $id = $_GET['id'];
-    
-            if(!$id || !strlen($id) === 8 ) {
-                header('Location: /');
-                return;
-            }
-    
-            // buscarlo en la BD
-            $registro = Registro::where('token', $id);
-            if(!$registro) {
-                header('Location: /');
-                return;
-            }
+         
             // Llenar las tablas de referencia
             $registro->usuario = Usuario::find($registro->usuario_id);
             $registro->paquete = Paquete::find($registro->paquete_id);
