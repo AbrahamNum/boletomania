@@ -91,7 +91,7 @@ function initPayPalButton() {
             .then( respuesta => respuesta.json())
             .then( resultado => {
                 if(resultado.resultado) {
-                    actions.redirect('https://fast-ocean-13494-d7e50af88d45.herokuapp.com/finalizar-registro/conciertos');
+                    actions.redirect('http://localhost:3000/finalizar-registro/conciertos');
                 }
             })
 

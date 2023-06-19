@@ -75,7 +75,6 @@ $router->post('/finalizar-registro/conciertos', [RegistroCrontroller::class, 'co
 // Boleto Virtual
 $router->get('/boleto', [RegistroCrontroller::class, 'boleto']);
 
-
 // Area Publica 
 $router->get('/', [PaginasController::class, 'index']);
 $router->get('/boletomania', [PaginasController::class, 'evento']);

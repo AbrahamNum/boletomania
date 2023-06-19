@@ -68,19 +68,16 @@ class RegistroCrontroller
         }
         }
         
+        public static function boleto(Router $router){
 
-        public static function boleto(Router $router) {
-
-         
-            // Llenar las tablas de referencia
-            $registro->usuario = Usuario::find($registro->usuario_id);
-            $registro->paquete = Paquete::find($registro->paquete_id);
+            
+            
     
             $router->render('registro/boleto', [
-                'titulo' => 'Asistencia a un evento de Boletomania',
-                'registro' => $registro
+                'titulo' => 'Finalizar Registro'
             ]);
         }
+        
 
             public static function pagar(Router $router){
 
