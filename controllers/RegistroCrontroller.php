@@ -26,7 +26,7 @@ class RegistroCrontroller
         $registro = Registro::where('usuario_id', $_SESSION['id']);
 
         if(isset($registro) && ($registro->paquete_id === "3" || $registro->paquete_id === "2" )) {
-            header('Location: https://fast-ocean-13494-d7e50af88d45.herokuapp.com/boleto?id=' . urlencode($registro->token));
+            header('Location: /boleto?id=' . urlencode($registro->token));
             return;
         }
         
@@ -46,7 +46,7 @@ class RegistroCrontroller
             $registro = Registro::where('usuario_id', $_SESSION['id']);
         
             if(isset($registro) && $registro->paquete_id === "3") {
-                header('Location: https://fast-ocean-13494-d7e50af88d45.herokuapp.com/boleto?id=' . urldecode($registro->token));
+                header('Location: /boleto?id=' . urldecode($registro->token));
             }
         
             $token = substr( md5(uniqid( rand(), true )), 0, 8);
@@ -63,7 +63,7 @@ class RegistroCrontroller
             $resultado = $registro->guardar();
         
             if($resultado) {
-                header('Location: https://fast-ocean-13494-d7e50af88d45.herokuapp.com/boleto?id=' . urldecode($registro->token));
+                header('Location: /boleto?id=' . urldecode($registro->token));
             }
         }
         }
